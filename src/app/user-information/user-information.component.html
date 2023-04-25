@@ -1,0 +1,25 @@
+<div class="table-responsive">
+<table class="table table-bordered " style="margin-top: 20px;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let UserInformation of UserInformation">
+            <td> {{UserInformation.name}}</td>
+            <td> {{UserInformation.username}}</td>
+            <td> {{UserInformation.email}}</td>
+            <td> <b>Street:</b>     {{UserInformation.address.street}},<br><b>Suite:</b>       {{UserInformation.address.suite}},<br><b>city:</b>     {{UserInformation.address.city}},<br><b>zipcode:</b>       {{UserInformation.address.zipcode}},<br><b> geo: <br>  latitude:</b>        {{UserInformation.address.geo.lat}},<br> <b>longitude:</b>     {{UserInformation.address.geo.lng}} </td>
+            <td> {{UserInformation.phone}}</td>
+            <td> {{UserInformation.company.name}}, {{UserInformation.company.catchPhrase}}, {{UserInformation.company.bs}}</td>
+
+        </tr>
+    </tbody>
+</table>
+</div>
